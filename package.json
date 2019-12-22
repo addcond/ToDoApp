@@ -4,5 +4,6 @@
   "dependencies": {},
   "devDependencies": {
     "http-server": "^0.12.0"
-  }
+  },
+  "main": "serverJs.js"
 }
