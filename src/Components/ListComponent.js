@@ -1,5 +1,5 @@
 import Component from "./component.js";
-import store from "../store";
+import store from "../store/index.js";
 import link from "../router/link.js";
 import {backend} from "../service/Back.js"
 

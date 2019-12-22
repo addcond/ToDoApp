@@ -1,6 +1,6 @@
 import ListComponent from "../Components/ListComponent.js";
 import LoginComponent from "../Components/LoginComponent.js";
-import store from "../store";
+import store from "../store/index.js";
 import RegisterComponent from "../Components/RegisterComponent.js";
 import CountersComponent from "../Components/Counters.js";
 

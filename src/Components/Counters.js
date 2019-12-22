@@ -1,5 +1,5 @@
 import component from "./component.js";
-import store from "../store";
+import store from "../store/index.js";
 
 export default class CountersComponent extends component {
     constructor(app, settings) {
