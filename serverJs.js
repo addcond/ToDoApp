@@ -7,8 +7,8 @@ const port = process.env.PORT || 3000;
 const server = http.createServer(function (request, response) {
     console.log('request ', request.url);
 
-    let filePath = '.' + request.url;
-    if (filePath == './') {
+    let filePath = './src' + request.url;
+    if (filePath == './src') {
         filePath = './src/index.html';
     }
 
