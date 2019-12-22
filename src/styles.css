@@ -1,0 +1,197 @@
+:root {
+    --border: #888888;
+    --decor: #777777;
+    --text: #141414;
+    --text-secondary: #555555;
+    --danger: #d62c1a;
+    --danger--dark: #a82315;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+    background: #f3f3f3;
+}
+​
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 2rem 1rem;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu,
+    Cantarell, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: var(--text);
+    position: absolute;
+   }
+​
+p {
+    margin: 0;
+}
+​
+h1, h2 {
+    padding: 10px;
+    margin: 2rem 0 0 0;
+    text-align: center;
+    background: #1abc9c;
+    color: white;
+    font-size: 30px;
+}
+​
+​
+.intro__heading {
+    text-align: center;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+​.app {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+    grid-gap: 2rem;
+}
+​
+.app__decor {
+    display: block;
+    width: 100%;
+    text-align: center;
+    font-size: 3rem;
+    line-height: 1;
+}
+​
+.app__decor small {
+    display: block;
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+}
+​
+.app__decor > * {
+    display: block;
+}
+​
+.app__decor > * + * {
+    margin-top: 0.4rem;
+}
+
+.new-item {
+    margin: 2rem 0 0 0;
+    padding: 1rem 0 0 0;
+
+}
+​
+.new-item__button {
+    position: relative;
+}
+
+.new-item__label {
+    font-size: 1.1rem !important;
+    font-weight: 400 !important;
+}
+​
+.visually-hidden {
+    display: block;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+    clip: rect(1px 1px 1px 1px);
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(1px);
+    white-space: nowrap;
+    position: absolute;
+}
+
+input[type = email], input[type = password], input[type = userName], input[type = register-user-name], input [type = text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+#new-item-field {
+    display: flex;
+    width: 416px;
+    height: 30px;
+}
+
+.boile {
+    margin: auto 32%;
+    position: -ms-device-fixed;
+    width: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: whitesmoke;
+    padding: 30px;
+}
+.formStyle {
+     margin: 10px 32%;
+     position: -ms-device-fixed;
+     width: auto;
+     background-color: rgba(0, 0, 0, 0.5);
+     color: whitesmoke;
+     padding: 30px;
+ }
+
+.wallpaper {
+    margin: auto 32%;
+    position: absolute;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 30px;
+    text-align: center;
+}
+
+#toRegister, #signIn, #register-button, #logOut, #c-button\ new-item__button {
+    background-color: goldenrod;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#backTologIn {
+    background-color: aqua;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+#logOut:hover  {
+    opacity: 0.8;
+    background: red;
+}
+
+#c-button\ new-item__button:hover {
+    opacity: 0.8;
+    background: darkgreen;
+
+}
+
+#toRegister:hover, #signIn:hover, #register-button:hover, #backTologIn:hover {
+        opacity: 0.8;
+        background: chocolate;
+ }
+
+.underline {
+    text-decoration:line-through;
+}
+
+.forehead {
+    text-align: center;
+}
+
+.mouseOver, .editInput {
+    display: none;
+}
+
+
+
+
+

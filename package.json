@@ -1,0 +1,8 @@
+{
+  "name": "ToDo_list",
+  "version": "1.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "http-server": "^0.12.0"
+  }
+}
