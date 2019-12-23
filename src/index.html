@@ -9,12 +9,11 @@
 </head>
 <template id="list">
     <section class="app__input">
-        <h2 class="app__heading">Things to do</h2>
         <div class="counters"></div>
         <div class="formStyle">
             <label for="new-item-field" class="new-item__label c-label">Add whatever you wish to do</label>
-            <input type="text" placeholder="Minimum 6 symbols" class="new-item__details c-input-field" id="new-item-field" autocomplete="off"/>
-            <button class="c-button new-item__button" id="c-button new-item__button">Save</button>
+            <input type="text" placeholder="Minimum 6 symbols" class="new-item__details save-input-field" id="new-item-field" autocomplete="off"/>
+            <button class="save-button new-item__button" id="save-button new-item__button">Save</button>
             <button class="logOut" id="logOut">Log Out</button>
             <button class="filter_all" id="filter_all">Filter all</button>
             <button class="filterForChecked" id="filterForChecked">Filter checked</button>
@@ -22,18 +21,10 @@
         </div>
         <div class="js-items"></div>
     </section>
-    <aside class="app__status">
-        <p role="status" class="visually-hidden">You have done<span class="js-status"> 1 thing</span> today, good job!</p>
-        <div class="app__decor js-count" aria-hidden="true">
-            <small>You did</small>
-            <span>0</span>
-            <small>things today</small>
-        </div>
-    </aside>
 </template>
 <template id="login">
-    <div class="wallpaper">
-        <label for="email">Enter Email or Login</label>
+    <div class="wrapper">
+        <label for="email">Enter Email</label>
         <input type="email" class=" " id="email" name="email"/>
         <label for="password">Enter Password</label>
         <input type="password" class="" id="password" name="password"/>
@@ -42,7 +33,7 @@
     </div>
 </template>
 <template id="register">
-    <div class="wallpaper">
+    <div class="wrapper">
         <label for="register-user-name">Enter Username</label>
         <input type="register-user-name" id="register-user-name" name="Username"/>
         <label for="register-email">Type Email</label>

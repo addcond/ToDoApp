@@ -5,11 +5,12 @@ export default class Router {
     constructor(anchor) {
         this.anchor = anchor;
 
-        window.addEventListener('popstate', event => {
+        window.addEventListener('popState', event => {
             this.changeRoute(event.state.route)
         })
         routerObserver.subscribe('changeRoute',this.changeRoute.bind(this))
     }
+
     changeRoute(route) {
 
         const conf = routerConfig[route];

@@ -18,8 +18,8 @@ export default class ListComponent extends Component {
             res => store.dispatch('addItems', res)
         )
 
-        const input = document.querySelector('.c-input-field');
-        const submit = document.querySelector('.c-button');
+        const input = document.querySelector('.save-input-field');
+        const submit = document.querySelector('.save-button');
         const handleClick = event => {
             event.preventDefault();
 
@@ -37,7 +37,7 @@ export default class ListComponent extends Component {
             link('login');
         })
 
-        this.initfilterslisteners(app);
+        this.initFiltersListeners(app);
     }
 
     deleteItem(event) {
@@ -46,13 +46,13 @@ export default class ListComponent extends Component {
             .then(() => store.dispatch('removeItem', { id }))
     }
 
-    methodForCheck(event) {
+    forCheck(event) {
         const id = event.target.dataset.id;
         backend.updateTodoChecked(id, event.target.checked)
             .then(() => store.dispatch('toggleCompleted', { id }))
     }
 
-    initfilterslisteners(app) {
+    initFiltersListeners(app) {
         app.querySelector('#filterForChecked' ).addEventListener('click', function(event) {
             this.unabledfilter='checked';
             this.render();
@@ -67,7 +67,7 @@ export default class ListComponent extends Component {
         }.bind(this))
     }
 
-    visbut(event) {
+    visibleButton(event) {
         const id = event.target.dataset.id;
         this.anchor.querySelector(`#${CSS.escape(id)}`).style.display = 'block';
     }
@@ -93,7 +93,7 @@ export default class ListComponent extends Component {
 
     render() {
         if (store.state.todo.length === 0) {
-            this.anchor.innerHTML = '<div class="wallpaper">No ToDo`s for today, gratz</div>';
+            this.anchor.innerHTML = '<div class="wrapper">No ToDo`s for today, gratz</div>';
             return;
         }
         let todo = store.state.todo;
@@ -129,11 +129,11 @@ export default class ListComponent extends Component {
         )
 
         this.anchor.querySelectorAll('.toDos').forEach((onHover) =>
-            onHover.addEventListener('mouseover', this.visbut.bind(this))
+            onHover.addEventListener('mouseover', this.visibleButton.bind(this))
         )
 
         this.anchor.querySelectorAll('.checkBox').forEach( (checkBox) =>
-            checkBox.addEventListener('click', this.methodForCheck.bind(this))
+            checkBox.addEventListener('click', this.forCheck.bind(this))
         )
         this.anchor.querySelectorAll('button').forEach((button) =>
             button.addEventListener('click', this.deleteItem.bind(this))

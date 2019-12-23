@@ -25,10 +25,6 @@ body {
     position: absolute;
    }
 ​
-p {
-    margin: 0;
-}
-​
 h1, h2 {
     padding: 10px;
     margin: 2rem 0 0 0;
@@ -38,56 +34,16 @@ h1, h2 {
     font-size: 30px;
 }
 ​
-​
 .intro__heading {
     text-align: center;
     font-size: 40px;
     font-weight: 400;
 }
 
-​.app {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-auto-flow: row;
-    grid-gap: 2rem;
-}
-​
-.app__decor {
-    display: block;
-    width: 100%;
-    text-align: center;
-    font-size: 3rem;
-    line-height: 1;
-}
-​
-.app__decor small {
-    display: block;
-    font-size: 1.3rem;
-    font-weight: 400;
-    color: var(--text-secondary);
-}
-​
-.app__decor > * {
-    display: block;
-}
-​
-.app__decor > * + * {
-    margin-top: 0.4rem;
-}
-
 .new-item {
     margin: 2rem 0 0 0;
     padding: 1rem 0 0 0;
 
-}
-​
-.new-item__button {
-    position: relative;
-}
-
-.new-item__label {
-    font-size: 1.1rem !important;
-    font-weight: 400 !important;
 }
 ​
 .visually-hidden {
@@ -109,6 +65,17 @@ input[type = email], input[type = password], input[type = userName], input[type 
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
+}
+
+.l1, .l2, .l3 {
+    color: black;
+    padding: 8px;
+    font-family: "3DS Fonticon";
+}
+
+.labelForCounter {
+    display: flex;
+    justify-content: center;
 }
 
 #new-item-field {
@@ -134,7 +101,7 @@ input[type = email], input[type = password], input[type = userName], input[type 
      padding: 30px;
  }
 
-.wallpaper {
+.wrapper {
     margin: auto 32%;
     position: absolute;
     width: 400px;
@@ -144,7 +111,7 @@ input[type = email], input[type = password], input[type = userName], input[type 
     text-align: center;
 }
 
-#toRegister, #signIn, #register-button, #logOut, #c-button\ new-item__button {
+#toRegister, #signIn, #register-button, #logOut, #save-button\ new-item__button {
     background-color: goldenrod;
     color: white;
     padding: 14px 20px;
@@ -152,6 +119,22 @@ input[type = email], input[type = password], input[type = userName], input[type 
     border: none;
     cursor: pointer;
     width: 100%;
+}
+
+#filter_all, #filterForChecked, #filterForUnChecked {
+    background-color: tan;
+    border: none;
+    color: white;
+    position: -ms-device-fixed;
+    padding: 25px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 1px 2px;
+    border-radius: 4px;
+}
+#filter_all:hover, #filterForChecked:hover, #filterForUnChecked:hover {
+    opacity: 0.5;
 }
 
 #backTologIn {
@@ -163,18 +146,17 @@ input[type = email], input[type = password], input[type = userName], input[type 
     width: 100%;
 }
 
-#logOut:hover  {
+#logOut:hover, #backTologIn:hover  {
     opacity: 0.8;
     background: red;
 }
 
-#c-button\ new-item__button:hover {
+#save-button\ new-item__button:hover, #register-button:hover {
     opacity: 0.8;
     background: darkgreen;
-
 }
 
-#toRegister:hover, #signIn:hover, #register-button:hover, #backTologIn:hover {
+#toRegister:hover, #signIn:hover {
         opacity: 0.8;
         background: chocolate;
  }

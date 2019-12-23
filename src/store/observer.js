@@ -19,7 +19,7 @@ export default class Observer {
 
     next(event, payload) {
         if (!this.subscribers[event]) {
-            console.warn(' Event not supported', event);
+            console.warn('Event not supported', event);
             return;
         }
 

@@ -14,8 +14,10 @@ export default class CountersComponent extends component {
         const todoCompletedLength = store.state.todo.filter((todoItem) => todoItem.completed).length;
         const todoUnCompletedLength = store.state.todo.filter((todoItem) => !todoItem.completed).length;
 
-        this.anchor.innerHTML = `<div>Number of todos ${todoLength}</div> 
-                                <div>Number of uncompleted todos ${todoUnCompletedLength}</div>
-                                <div>Number of completed todos ${todoCompletedLength}</div>`
+        this.anchor.innerHTML = `<div class="labelForCounter">
+                                     <label class="l1">Number of todos  ${todoLength}
+                                                       Number of uncompleted todos  ${todoUnCompletedLength}
+                                                       Number of completed todos  ${todoCompletedLength}
+                                </div>`
     }
 }

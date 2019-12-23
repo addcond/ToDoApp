@@ -66,21 +66,6 @@ class Backend {
             .catch(() =>false)
     }
 
-    checkAuth() {
-      return fetch(this.url+'/me', {
-          method: 'GET',
-          headers: {
-              'Authorization': this.authStorage.getElement('token'),
-          },
-      })
-          .then(res => {
-              if(!res.ok){
-                  return Promise.reject('error')
-              }
-              return Promise.resolve(res.json())
-          })
-    }
-
     createToDo(text, createDate, completed) {
         return fetch(this.url+'/todos',{
             method: 'POST',
@@ -104,21 +89,6 @@ class Backend {
 
     getToDo() {
         return fetch(this.url+'/todos', {
-            method: 'GET',
-            headers: {
-                'Authorization': this.authStorage.getElement('token'),
-            }
-        })
-            .then(res => {
-                if(!res.ok){
-                    return Promise.reject('error')
-                }
-                return Promise.resolve(res.json())
-            })
-    }
-
-    getToDoById(id) {
-        return fetch(this.url+`/todos/${id}`, {
             method: 'GET',
             headers: {
                 'Authorization': this.authStorage.getElement('token'),
@@ -186,18 +156,6 @@ class Backend {
             })
     }
 
-    getItems() {
-        fetch(this.url, {
-            method: 'GET',
-            headers: {
-                'Authorization': this.authStorage.getElement('token'),
-            }
-        })
-            .then(res => res.json())
-            .then(res => this.store.dispatch({ type: 'ADD_ITEMS', payload: items, } ))
-    }
-
-
     addItem(item) {
     fetch(this.url, {
         method: 'POST',
@@ -211,14 +169,6 @@ class Backend {
         .then(responseItem => this.store.dispatch({ type: 'ADD_ITEMS', payload: [responseItem], } ))
     }
 }
-
-class AbstractComponent {
-    constructor(store, backend) {
-        this.store = store
-        this.backend = backend
-    }
-}
-
 
 const authStorage = new AuthStorage();
 export const backend = new Backend(store, authStorage);
